@@ -9,14 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView{
+            ZStack {
+                Color.iron // Kolor tła
+                    .edgesIgnoringSafeArea(.all) // Rozciągnięcie na cały ekran
+                
+                VStack {
+                    Text("Ekran główny")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .padding()
+                }
+            }
         }
-        .padding()
     }
+}
+
+extension Color {
+    static let iron = Color(red: 209/255, green: 209/255, blue: 209/255)
 }
 
 #Preview {
