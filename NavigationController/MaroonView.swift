@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MaroonView: UIViewControllerRepresentable {
+struct MaroonViewControllerWrapper: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UINavigationController {
         let maroonVC = MaroonViewController()
         let navigationController = UINavigationController(rootViewController: maroonVC)
@@ -17,7 +17,8 @@ struct MaroonView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}
 }
 
+
 #Preview {
-    MaroonView()
+    MaroonViewControllerWrapper()
         .edgesIgnoringSafeArea(.all)
 }

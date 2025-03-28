@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IronView: UIViewControllerRepresentable {
+struct IronViewControllerWrapper: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UINavigationController {
         let ironVC = IronViewController()
         let navigationController = UINavigationController(rootViewController: ironVC)
@@ -17,7 +17,8 @@ struct IronView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}
 }
 
+
 #Preview {
-    MaroonView()
+    IronViewControllerWrapper()
         .edgesIgnoringSafeArea(.all)
 }
