@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct IronView: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> IronViewController {
-        return IronViewController()
+    func makeUIViewController(context: Context) -> UINavigationController {
+        let ironVC = IronViewController()
+        let navigationController = UINavigationController(rootViewController: ironVC)
+        return navigationController
     }
 
-    func updateUIViewController(_ uiViewController: IronViewController, context: Context) {}
-
+    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}
 }
 
 #Preview {
-    IronView()
+    MaroonView()
         .edgesIgnoringSafeArea(.all)
 }
